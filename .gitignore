@@ -1,3 +1,4 @@
 #.gitignore for B-Muhvieh
 
 conf/conf_db.php
+conf/conf.php

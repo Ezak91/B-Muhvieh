@@ -12,6 +12,7 @@
   $query = "INSERT INTO user VALUES (NULL,'$mail','$password','$firstName','$name','$username',NOW(),0)";
 
   if (!$result = $mysqli->query($query)) {
+    //TODO use function !
     $alertMessage = "Registration failed please check your input";
     $type = "danger";
     echo "<script type='text/javascript'>window.location.href='../index.php?message=$alertMessage&type=$type'</script>";
@@ -36,9 +37,9 @@
 
     mail($mail, $subject, $message, $header);
 
+    //TODO use function
     $alertMessage = "Registration success, please check your emails to verify your account";
     $type = "info";
-
     echo"<script type='text/javascript'>window.location.href='../index.php?message=$alertMessage&type=$type'</script>";
   }
 

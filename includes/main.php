@@ -19,7 +19,7 @@
     <div>
        <?php include("navbar.php"); ?>
        <?php include("message.php"); ?>
-       <?php include($_POST['inc']); ?>
+       <?php include("includes/".$_GET['inc']); ?>
     </div>
   </body>
 </html>

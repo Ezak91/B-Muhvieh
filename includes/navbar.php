@@ -10,7 +10,7 @@
    <ul class="nav navbar-nav navbar-right">
        <?php
        if(isset($_SESSION["userid"])) {
-         echo"<li><a id='logout-nav-link' href='logout.php'><span class='glyphicon glyphicon-log-in'></span> Logout</a></li>";
+         echo"<li><a id='logout-nav-link' href='includes/logout.php'><span class='glyphicon glyphicon-log-in'></span> Logout</a></li>";
        }
        else
        {

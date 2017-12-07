@@ -9,7 +9,7 @@
   $name = $mysqli->real_escape_string($_POST['name']);
   $username = $mysqli->real_escape_string($_POST['username']);
 
-  $query = "INSERT INTO user VALUES (NULL,'$mail','$password','$firstName','$name','$username',NOW(),0)";;
+  $query = "INSERT INTO user VALUES (NULL,'$mail','$password','$firstName','$name','$username',NOW(),0)";
 
   if (!$result = $mysqli->query($query)) {
     $alertMessage = "Registration failed please check your input";

@@ -29,7 +29,7 @@
     //send mail to verify account
     // TODO TEST MAIL FUNCTION ON SERVER
     $subject = 'Your registration for B-Muhvieh';
-    $message = 'Follow the link to verify your registration : '.$BASE_URL'/verify.php?token='.$token;
+    $message = 'Follow the link to verify your registration : '.$BASE_URL.'/verify.php?token='.$token;
     $header = 'From: '.$WEBMASTER . "\r\n" .
         'Reply-To: '.$WEBMASTER . "\r\n" .
         'X-Mailer: PHP/' . phpversion();

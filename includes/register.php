@@ -4,7 +4,7 @@
 
   $mail = $mysqli->real_escape_string($_POST['email']);
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-  $password = $mysqli->real_escape_string($_POST['password']);
+  $password = $mysqli->real_escape_string($password);
   $firstName = $mysqli->real_escape_string($_POST['firstname']);
   $name = $mysqli->real_escape_string($_POST['name']);
   $username = $mysqli->real_escape_string($_POST['username']);

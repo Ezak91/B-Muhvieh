@@ -2,6 +2,7 @@
  <div class="container-fluid">
    <div class="navbar-header">
      <a class="navbar-brand" href="#">B-Muhvieh</a>
+     <img src="images/main_logo.png" height="50" width="50"/>
    </div>
    <ul class="nav navbar-nav">
      <li><a href="index.php?inc=movies.php">My Movies</a></li>

@@ -5,3 +5,30 @@
 .logo {
   margin-top: 5px;
 }
+
+.searchbar {
+  margin-top: 20px;
+}
+
+.thumbnail {
+  background-color: #4fb4e1;
+  height: 565px;
+}
+
+.title {
+  color: #ffffff;
+}
+
+.date {
+  color: #ffffff;
+}
+
+.poster {
+  border: 1px solid #4fb4e3;
+}
+
+#resultsrow {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}

@@ -5,8 +5,9 @@
      <img src="images/main_logo.png" height="50" width="50"/>
    </div>
    <ul class="nav navbar-nav">
-     <li><a href="index.php?inc=movies.php">My Movies</a></li>
-     <li><a href="index.php?inc=watchlist.php">Watchlist</a></li>
+     <li><a href="index.php?inc=movies.php"><span class="glyphicon glyphicon-facetime-video"></span> My Movies</a></li>
+     <li><a href="index.php?inc=watchlist.php"><span class="glyphicon glyphicon-eye-open"></span> Watchlist</a></li>
+     <li><a href="index.php?inc=search.php"><span class="glyphicon glyphicon-search"></span> Search</a></li>
    </ul>
    <ul class="nav navbar-nav navbar-right">
        <?php

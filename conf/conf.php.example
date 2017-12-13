@@ -1,10 +1,17 @@
 <?php
   //set config here
+
+  // Webside
   $BASE_HOST = "http://localhost";
   $BASE_PATH = "/B-Muhvieh";
   $BASE_PORT = "80";
   $WEBMASTER = "webmaster@b-muhvieh.com";
 
+  // TMDB
+  $APIKEY = "xxxxxxxxxxxxxxxxxxxxxxx";
+  $LANGUAGE = "de";
+  $API_BASE_URL = "http://api.themoviedb.org/3/";
+
   //dont change anything here
-  $BASE_URL = $BASE_HOST.":".$BASEPORT.$BASE_PATH;
+  $BASE_URL = $BASE_HOST.":".$BASE_PORT.$BASE_PATH;
 ?>

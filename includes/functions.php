@@ -1,5 +1,5 @@
 <?php
-
+include "../conf/conf.php";
 //login failed
 function login_error()
 {
@@ -26,5 +26,35 @@ function redirect_with_message($target, $inc, $message, $type) {
     $include = $include.$inc."&";
   }
   echo "<script type='text/javascript'>window.location.href='".$target.$include."message=$message&type=$type'</script>";
+}
+
+// TMDB functions
+
+//Get movie info by movie id
+function get_movieinfo_byid($tmdbID) {
+  global $APIKEY;
+  global $API_BASE_URL;
+  global $LANGUAGE;
+  $path = "movie/$tmdbID?&api_key=$APIKEY&language=$LANGUAGE&append_to_response=trailers";
+  return json_encode(json_decode(file_get_contents($BASE_API_URL.$path)), JSON_PRETTY_PRINT);
+
+}
+
+//get cast info by movie id
+function get_cast_byid($tmdbID) {
+  global $APIKEY;
+  global $API_BASE_URL;
+  global $LANGUAGE;
+  $path = "/movie/$dmdbID/credits?&api_key=$APIKEY&language=$LANGUAGE";
+  return json_encode(json_decode(file_get_contents($BASE_API_URL.$path)), JSON_PRETTY_PRINT);
+}
+
+// Search Movies by title
+function search_movies_by_name($term) {
+  global $APIKEY;
+  global $API_BASE_URL;
+  global $LANGUAGE;
+  $path = "search/movie?api_key=$APIKEY&language=$LANGUAGE&query=".urlencode($term);
+  return json_encode(json_decode(file_get_contents($API_BASE_URL.$path)), JSON_PRETTY_PRINT);
 }
 ?>

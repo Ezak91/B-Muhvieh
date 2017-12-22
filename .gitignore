@@ -2,3 +2,8 @@
 
 conf/conf_db.php
 conf/conf.php
+
+#tmdb images
+images/cover/*.jpg
+images/profile/*.jpg
+images/backdrop/*.jpg

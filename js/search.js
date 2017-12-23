@@ -18,10 +18,10 @@ $('document').ready(function() {
           '.title': 'movie.title',
           '.date': 'movie.release_date',
           '.btn1@href': function(movie) {
-            return 'includes/addmovie.php?tmdbid=' + movie.item.id
+            return 'includes/addmovie.php?list=user&tmdbid=' + movie.item.id
           },
           '.btn2@href': function(movie) {
-            return 'index.php?inc=addwatchlist.php&tmdbid=' + movie.item.id
+            return 'includes/addmovie.php?list=watch&tmdbid=' + movie.item.id
           }
         }
       }

@@ -15,7 +15,7 @@
     {
       $_SESSION["userid"] = $user->id;
       $_SESSION["username"] = $user->username;
-      redirect_with_message("../index.php","inc=movies.php","Welcome Back ".$user->username,"success");
+      redirect_with_message("../index.php","movies.php","Welcome Back ".$user->username,"success");
     }
     else
     {

@@ -8,5 +8,5 @@ else {
 }
 ?>
 <script type="text/javascript">
-    loadMovies(<?php echo$_SESSION["userid"];?>,"user");
+    loadMovies(<?php echo$_SESSION["userid"];?>,"watch");
 </script>

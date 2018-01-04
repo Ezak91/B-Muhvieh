@@ -1,6 +1,6 @@
 $('document').ready(function() {
   $('#resultsrow').addClass('hidden');
-  $( "#autocomplete" ).click(function ( e, data ) {
+  $( "#search" ).click(function ( e, data ) {
     $('#resultsrow').load(document.URL +  ' #resultsrow');
     $('#resultsrow').removeClass('hidden');
     $term = $('#searchtext').val();

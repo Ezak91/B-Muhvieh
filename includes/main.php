@@ -16,6 +16,7 @@
     <script type="text/javascript" src="js/login.js"></script>
     <script type='text/javascript' src="js/pure.js"></script>
     <script type='text/javascript' src="js/search.js"></script>
+    <script type='text/javascript' src="js/loadmovies.js"></script>
   </head>
   <body>
     <div>

@@ -131,6 +131,19 @@ function add_user_movie($movie_id, $user_id) {
 
 }
 
+//add a movie to watchlist
+function add_watch_movie($movie_id, $user_id) {
+  global $mysqli;
+
+  $query = "Insert into watch values(
+    $user_id,
+    $movie_id
+  );";
+
+  $mysqli->query($query);
+
+}
+
 // download image (cover,profile)
 function download_image($path,$image) {
   if(!empty($image)) {

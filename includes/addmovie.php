@@ -24,6 +24,7 @@
 
   //add movie to watchlist
   if($list == "watch") {
-    redirect_with_message("../index.php","watchlist",$movieInfo->title." added to watchlist.","info");
+    add_watch_movie($tmdb_id,$user_id);
+    redirect_with_message("../index.php","watchlist.php",$movieInfo->title." added to watchlist.","info");
   }
 ?>

@@ -9,4 +9,5 @@ else {
 ?>
 <script type="text/javascript">
     loadMovieInfo(<?php echo$_GET["tmdbid"];?>);
+    loadActorInfo(<?php echo$_GET["tmdbid"];?>);
 </script>

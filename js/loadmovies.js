@@ -30,7 +30,7 @@ function loadMovies(userid,list) {
             return ' glyphicon-eye-open'
           },
           '.btn2@href': function(movie) {
-            return 'includes/removemovie.php?tmdbid=' + movie.item.tmdb_id
+            return 'includes/removemovie.php?tmdbid=' + movie.item.tmdb_id + "&list=user"
           },
           '.btn2@class+': function(movie) {
             if(list == 'watch') {

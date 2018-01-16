@@ -153,4 +153,16 @@ function download_image($path,$image) {
   }
 }
 
+function delete_movie($user_id,$tmdb_id,$list) {
+  global $mysqli;
+
+  if($list == "user") {
+    $query = "Delete from user_movie where user_id = $user_id AND tmdb_id = $tmdb_id;";
+  }
+  if($list == "watch") {
+    $query = "Delete from watch where user_id = $user_id AND tmdb_id = $tmdb_id;";
+  }
+  $mysqli->query($query);
+}
+
 ?>

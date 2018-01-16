@@ -59,4 +59,18 @@ function search_movies_by_name($term) {
   return json_encode(json_decode(file_get_contents($API_BASE_URL.$path)), JSON_PRETTY_PRINT);
 }
 
+function get_recommendation_movies($movie_id) {
+  global $APIKEY;
+  global $API_BASE_URL;
+  global $LANGUAGE;
+  $path = "movie/$movie_id/recommendations?api_key=$APIKEY&language=$LANGUAGE";
+  $recommendations = json_decode(file_get_contents($API_BASE_URL.$path));
+  $recommendations = $recommendations->results;
+  //load max six movies
+  if(sizeof($recommendations) > 6) {
+    $recommendations = array_slice($recommendations, 0, 6);
+  }
+  return json_encode($recommendations,JSON_PRETTY_PRINT);
+}
+
 ?>

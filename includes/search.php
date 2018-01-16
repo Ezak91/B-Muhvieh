@@ -19,8 +19,8 @@
               <h3 class="title"></h3>
               <h4 class="date"></h4>
               <p>
-                <a class="btn1 btn btn-info" id="addmovie" href="#" target="_blank" role="button"><span class="glyphicon glyphicon-plus"></span> Add Movie</a>
-                <a class="btn2 btn btn-info" id="addwatch" href="#" target="_blank" role="button"><span class="glyphicon glyphicon-eye-open"></span> Add to Watchlist</a>
+                <a class="btn1 btn btn-info" id="addmovie" href="#" role="button"><span class="glyphicon glyphicon-plus"></span> Add Movie</a>
+                <a class="btn2 btn btn-info" id="addwatch" href="#" role="button"><span class="glyphicon glyphicon-eye-open"></span> Add to Watchlist</a>
               </p>
             </div>
           </div>

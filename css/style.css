@@ -35,6 +35,10 @@
   border: 1px solid #4fb4e3;
 }
 
+#inforow {
+  margin-top: 15px;
+}
+
 #resultsrow {
   margin-top: 5px;
   margin-left: 5px;
@@ -89,9 +93,18 @@
   }
 }
 
-.rating-label {
-  position: absolute;
+.c100-right {
+  display: inline-block;
   margin-top: 40px;
+}
+
+.c100-right .link {
+  margin-left: 40px;
+}
+
+span.link {
+    font-size: 2em;
+    color: #ffffff;
 }
 
 .media-body {

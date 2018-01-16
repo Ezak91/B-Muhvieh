@@ -18,6 +18,21 @@ function loadMovieInfo(tmdbid) {
         '#percent': function(movie) {
           return  movie.item.vote_average*10 + "%"
         },
+        '#percent@title': function(movie) {
+          return  movie.item.vote_count + " Votes"
+        },
+        '#homepage@href': function(movie) {
+          return  movie.item.homepage
+        },
+        '#tmdb@href': function(movie) {
+          return "https://www.themoviedb.org/movie/" + movie.item.tmdb_id
+        },
+        '#imdb@href': function(movie) {
+          return  "http://www.imdb.com/title/" + movie.item.imdb_id
+        },
+        '.trailer@onclick': function(movie) {
+          return  "changeVideo('"+movie.item.trailer_id+"')"
+        },
         '.runtime+': function(movie) {
           return  " " + movie.item.runtime + " min."
         },
@@ -49,7 +64,7 @@ function loadMovieInfo(tmdbid) {
 function loadActorInfo(tmdbid) {
     $.post("includes/loadmovieInfo.php","tmdbid="+tmdbid+"&action=actor", function(data, textStatus) {
     var directive = {
-      '.actorhumb': {
+      '.actorthumb': {
         'movie<-': {
           '.poster@src': function(movie) {
             return "https://image.tmdb.org/t/p/w640"+ movie.item.profile_path
@@ -68,4 +83,77 @@ function loadActorInfo(tmdbid) {
     };
     $p('#actorrow').render(data, directive);
   }, "json")
+}
+
+function loadCrewInfo(tmdbid) {
+    $.post("includes/loadmovieInfo.php","tmdbid="+tmdbid+"&action=crew", function(data, textStatus) {
+    var directive = {
+      '.crewthumb': {
+        'movie<-': {
+          '.poster@src': function(movie) {
+            return "https://image.tmdb.org/t/p/w640"+ movie.item.profile_path
+          },
+          '.crewlink@href': function(movie) {
+            return "https://www.themoviedb.org/person/"+movie.item.id
+          },
+          '.name': function(movie) {
+            return movie.item.name
+          },
+          '.job': function(movie) {
+            return movie.item.job
+          }
+        }
+      }
+    };
+    $p('#crewrow').render(data, directive);
+  }, "json")
+}
+
+function loadGenre(tmdbid) {
+    $.post("includes/loadmovieInfo.php","tmdbid="+tmdbid+"&action=genre", function(data, textStatus) {
+    var directive = {
+      '.genre': {
+        'movie<-': {
+          '.label-info': function(movie) {
+            return movie.item.name
+          }
+        }
+      }
+    };
+    $p('.genrerow').render(data, directive);
+  }, "json")
+}
+
+function loadRecommendations(tmdbid) {
+    $.post("includes/recommendations.php","tmdbid="+tmdbid, function(data, textStatus) {
+    var directive = {
+      '.recommendthumb': {
+        'movie<-': {
+          '.poster@src': function(movie) {
+            return "http://image.tmdb.org/t/p/w500"+ movie.item.poster_path
+          },
+          '.title': function(movie) {
+            return movie.item.title
+          },
+          '.release_date': function(movie) {
+            return movie.item.release_date
+          }
+        }
+      }
+    };
+    $p('#recommendrow').render(data, directive);
+  }, "json")
+}
+
+$(document).ready(function(){
+  $("#myModal").on("hidden.bs.modal",function(){
+    $("#iframeYoutube").attr("src","#");
+  })
+})
+
+function changeVideo(vId){
+  var iframe=document.getElementById("iframeYoutube");
+  iframe.src="https://www.youtube.com/embed/"+vId;
+
+  $("#myModal").modal("show");
 }

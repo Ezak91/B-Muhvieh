@@ -11,10 +11,14 @@
   if ($result = $mysqli->query($query)) {
     $user = $result->fetch_object();
     $pw = $user->password;
-    if( password_verify($password, $pw) )
+    $active = $user->active;
+    if( password_verify($password, $pw)  )
     {
       $_SESSION["userid"] = $user->id;
       $_SESSION["username"] = $user->username;
+      if($active != 1) {
+        redirect_with_message("../index.php","","Please first verify your account.","danger");
+      }
       redirect_with_message("../index.php","movies.php","Welcome Back ".$user->username,"success");
     }
     else

@@ -14,6 +14,7 @@
   else {
     $user = $result->fetch_object();
     $userID = $user->id;
+    $mail = $user->email;
     $token = md5(uniqid($userID, true));
     $query = "INSERT INTO recover VALUES ($userID,'$token')";
     $result = $mysqli->query($query);

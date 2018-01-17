@@ -1,6 +1,6 @@
 <?php
   include("../conf/conf_db.php");
-  include("..cong/conf.php");
+  include("../conf/conf.php");
 
   $mail = $mysqli->real_escape_string($_POST['email']);
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);

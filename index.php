@@ -2,7 +2,9 @@
 session_start();
 
 if(!isset($_SESSION["userid"])) {
-  $_GET["inc"] = "login.html";
+  if(!isset($_GET["inc"]) || $_GET["inc"] != "recover.php") {
+    $_GET["inc"] = "login.html";
+  }
 }
 else {
   if(!isset($_GET["inc"])) {

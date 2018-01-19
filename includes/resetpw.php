@@ -6,7 +6,7 @@
   $userid = $_POST["userid"];
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-  $query = "Select * from recover where user_id = $userid;";
+  $query = "Select * from recover where userID = $userid;";
   $result = $mysqli->query($query);
 
   if(!$result) {

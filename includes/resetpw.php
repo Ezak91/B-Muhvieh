@@ -6,7 +6,7 @@
   $userid = $_POST["userid"];
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-  $query = "Select * from recover where userID = $userid;";
+  $query = "Select * from recover where user_id = $userid;";
   $result = $mysqli->query($query);
 
   if(!$result) {
@@ -17,7 +17,7 @@
     $dbtoken = $recover->token;
 
     if($dbtoken == $token) {
-      $query = "Update user set password = $password where id = $userid";
+      $query = "Update user set password = '$password' where id = $userid";
       $result = $mysqli->query($query);
       $query = "Delete from recover where user_id = $userid";
       $result = $mysqli->query($query);

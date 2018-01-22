@@ -19,8 +19,8 @@
 								<form id="recover-form" action="includes/resetpw.php" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="1" class="form-control" placeholder="New password" value="">
-                    <input type="hidden" name="userid" value="<?phpecho$user_id?>">
-                    <input type="hidden" name="token" value="<?phpecho$token?>">
+                    <input type="hidden" name="userid" value="<?php echo $user_id ?>">
+                    <input type="hidden" name="token" value="<?php echo $token ?>">
 									</div>
 									<div class="form-group">
 										<div class="row">

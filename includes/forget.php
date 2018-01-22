@@ -21,7 +21,7 @@
 
     //send mail to to reset the password
     $subject = 'New password for B-Muhvieh';
-    $message = 'Follow the link to reset your password : '.$BASE_URL.'/includes/recover.php?userid='.$userID.'&token='.$token;
+    $message = 'Follow the link to reset your password : '.$BASE_URL.'/index.php?inc=recover.php&userid='.$userID.'&token='.$token;
     $header = 'From: '.$WEBMASTER . "\r\n" .
         'Reply-To: '.$WEBMASTER . "\r\n" .
         'X-Mailer: PHP/' . phpversion();

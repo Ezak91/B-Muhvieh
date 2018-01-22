@@ -18,6 +18,9 @@ function loadMovies(userid,list) {
           '.title': 'movie.title',
           '.date': 'movie.release_date',
           '.btn1@href': function(movie) {
+            if(list == "watch") {
+              return 'includes/removemovie.php?tmdbid=' + movie.item.tmdb_id + "&list=watch"
+            }
             return 'includes/addmovie.php?list=watch&tmdbid=' + movie.item.tmdb_id
           },
           '.btn1+': function(movie) {

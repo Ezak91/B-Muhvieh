@@ -147,7 +147,7 @@ function add_watch_movie($movie_id, $user_id) {
 // download image (cover,profile)
 function download_image($path,$image) {
   if(!empty($image)) {
-    $url = 'http://image.tmdb.org/t/p/w500'.$image;
+    $url = 'http://image.tmdb.org/t/p/original'.$image;
     $img = '../images/'.$path.$image;
     file_put_contents($img, file_get_contents($url));
   }

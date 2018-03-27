@@ -67,7 +67,7 @@ function loadActorInfo(tmdbid) {
       '.actorthumb': {
         'movie<-': {
           '.poster@src': function(movie) {
-            return "https://image.tmdb.org/t/p/w640"+ movie.item.profile_path
+            return "https://image.tmdb.org/t/p/original"+ movie.item.profile_path
           },
           '.actorlink@href': function(movie) {
             return "https://www.themoviedb.org/person/"+movie.item.id
@@ -91,7 +91,7 @@ function loadCrewInfo(tmdbid) {
       '.crewthumb': {
         'movie<-': {
           '.poster@src': function(movie) {
-            return "https://image.tmdb.org/t/p/w640"+ movie.item.profile_path
+            return "https://image.tmdb.org/t/p/original"+ movie.item.profile_path
           },
           '.crewlink@href': function(movie) {
             return "https://www.themoviedb.org/person/"+movie.item.id
@@ -130,7 +130,7 @@ function loadRecommendations(tmdbid) {
       '.recommendthumb': {
         'movie<-': {
           '.poster@src': function(movie) {
-            return "http://image.tmdb.org/t/p/w500"+ movie.item.poster_path
+            return "http://image.tmdb.org/t/p/original"+ movie.item.poster_path
           },
           '.title': function(movie) {
             return movie.item.title

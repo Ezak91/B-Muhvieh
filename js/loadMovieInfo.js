@@ -56,6 +56,12 @@ function loadMovieInfo(tmdbid) {
         },
         '#movie_desc': function(movie) {
           return  movie.item.overview
+        },
+        '#collection@href': function(movie) {
+          return 'includes/addmovie.php?list=user&tmdbid=' + movie.item.tmdb_id
+        },
+        '#watchlist@href': function(movie) {
+          return 'includes/addmovie.php?list=watch&tmdbid=' + movie.item.tmdb_id
         }
         }
       }
@@ -152,7 +158,7 @@ function loadRecommendations(tmdbid) {
           },
           '.movielink@href': function(movie) {
             return 'index.php?inc=movieinfo.php&mode=new&tmdbid=' + movie.item.id
-          }          
+          }
         }
       }
     };

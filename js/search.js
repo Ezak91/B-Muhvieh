@@ -22,6 +22,9 @@ $('document').ready(function() {
           },
           '.btn2@href': function(movie) {
             return 'includes/addmovie.php?list=watch&tmdbid=' + movie.item.id
+          },
+          '.movielink@href': function(movie) {
+            return 'index.php?inc=movieinfo.php&mode=new&tmdbid=' + movie.item.id
           }
         }
       }

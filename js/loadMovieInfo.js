@@ -149,7 +149,10 @@ function loadRecommendations(tmdbid) {
           },
           '.release_date': function(movie) {
             return movie.item.release_date
-          }
+          },
+          '.movielink@href': function(movie) {
+            return 'index.php?inc=movieinfo.php&mode=new&tmdbid=' + movie.item.id
+          }          
         }
       }
     };

@@ -14,10 +14,12 @@
         <div class="moviethumb">
         <div class="col-sm-2 col-ml-6">
           <div class="thumbnail">
-            <img class="poster card-img-top" src="" style="width: 180px; height: 270x" alt="" >
+            <a class="movielink" href="#"><img class="poster card-img-top" src="" style="width: 180px; height: 270x" alt="" ></a>
             <div class="caption">
-              <h3 class="title"></h3>
-              <h4 class="date"></h4>
+              <a class="movielink" href="#">
+                <h3 class="title"></h3>
+                <h4 class="date"></h4>
+              </a>
               <p>
                 <a class="btn1 btn btn-info" id="addmovie" href="#" role="button"><span class="glyphicon glyphicon-plus"></span> Add Movie</a>
                 <a class="btn2 btn btn-info" id="addwatch" href="#" role="button"><span class="glyphicon glyphicon-eye-open"></span> Add to Watchlist</a>

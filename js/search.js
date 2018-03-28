@@ -13,7 +13,7 @@ $('document').ready(function() {
               return 'images/no_poster.jpg'
             }
             else {
-              return 'http://image.tmdb.org/t/p/w500' + movie.item.poster_path
+              return 'http://image.tmdb.org/t/p/original' + movie.item.poster_path
             }},
           '.title': 'movie.title',
           '.date': 'movie.release_date',

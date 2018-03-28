@@ -1,7 +1,7 @@
 <nav class="navbar-default">
  <div class="container-fluid">
    <div class="navbar-header">
-     <a class="navbar-brand" href="#">B-Muhvieh</a>
+     <a class="navbar-brand" href="index.php">B-Muhvieh</a>
      <img src="images/main_logo.png" height="50" width="50"/>
    </div>
    <ul class="nav navbar-nav">

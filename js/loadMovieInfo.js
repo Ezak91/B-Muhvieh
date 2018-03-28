@@ -7,6 +7,9 @@ function loadMovieInfo(tmdbid) {
             return "background: #000 top center no-repeat url(images/backdrop"+ movie.item.backdrop_path +");"
           },
           '.media-object@src': function(movie) {
+            if(movie.item.poster_path == "") {
+              return 'images/no_poster.jpg'
+            }
             return "images/cover"+movie.item.poster_path
           },
           '.media-heading': function(movie) {
@@ -67,6 +70,9 @@ function loadActorInfo(tmdbid) {
       '.actorthumb': {
         'movie<-': {
           '.poster@src': function(movie) {
+            if(movie.item.profile_path == "") {
+              return 'images/no_picture.jpg'
+            }
             return "https://image.tmdb.org/t/p/original"+ movie.item.profile_path
           },
           '.actorlink@href': function(movie) {
@@ -91,6 +97,9 @@ function loadCrewInfo(tmdbid) {
       '.crewthumb': {
         'movie<-': {
           '.poster@src': function(movie) {
+            if(movie.item.profile_path == "") {
+              return 'images/no_picture.jpg'
+            }
             return "https://image.tmdb.org/t/p/original"+ movie.item.profile_path
           },
           '.crewlink@href': function(movie) {
@@ -130,6 +139,9 @@ function loadRecommendations(tmdbid) {
       '.recommendthumb': {
         'movie<-': {
           '.poster@src': function(movie) {
+            if(movie.item.poster_path == "") {
+              return 'images/no_picture.jpg'
+            }
             return "http://image.tmdb.org/t/p/original"+ movie.item.poster_path
           },
           '.title': function(movie) {

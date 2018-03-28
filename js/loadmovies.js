@@ -9,7 +9,7 @@ function loadMovies(userid,list) {
             return 'index.php?inc=movieinfo.php&tmdbid=' + movie.item.tmdb_id
           },
           '.poster@src': function(movie) {
-            if(movie.item.poster_path == null) {
+            if(movie.item.poster_path == "") {
               return 'images/no_poster.jpg'
             }
             else {
